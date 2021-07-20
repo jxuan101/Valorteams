@@ -1,0 +1,37 @@
+.navbar-container {
+    background-color: #000;
+    height: 200px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.navbar-link {
+    display: inline-block;
+}
+
+.navbar-link-url {
+    filter: saturate(0);
+    -webkit-user-drag: none;
+}
+
+.selected-nav-link {
+    filter: saturate(1);
+    -webkit-user-drag: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+.navbar-container::-webkit-scrollbar {
+    background: #000;
+}
+
+.navbar-container::-webkit-scrollbar-thumb {
+    background: rgb(22, 163, 173);
+}
+  
+.navbar-container::-webkit-scrollbar-track {
+    background: rgba(65, 64, 64, 0.979);
+}
