@@ -15,6 +15,10 @@
     -webkit-user-drag: none;
 }
 
+.navbar-link-url:hover {
+    filter: saturate(1);
+}
+
 .selected-nav-link {
     filter: saturate(1);
     -webkit-user-drag: none;

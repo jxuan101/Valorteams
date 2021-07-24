@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import Navbar from './components/navbar';
+import Home from './components/pages'
 import Breeze from './components/pages/breeze';
 import Icebox from './components/pages/icebox';
 import Bind from './components/pages/bind';
@@ -16,6 +17,7 @@ export default function App() {
     <Router>
       <Navbar />
       <Switch>
+        <Route exact path = "/" component = {Home} />
         <Route path = "/breeze" component = {Breeze} />
         <Route path = "/icebox" component = {Icebox} />
         <Route path = "/bind" component = {Bind} />
