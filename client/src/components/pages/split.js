@@ -1,10 +1,8 @@
-import './split.css';
-import React from 'react';
+import './pages.css';
+import Template from './template.js';
 
 export default function Split() {
     return (
-        <div>
-            Split
-        </div>
+        <Template map = 'Split'/>
     )
-};
+}

@@ -1,10 +1,8 @@
-import './breeze.css';
-import React from 'react';
+import './pages.css';
+import Template from './template.js';
 
 export default function Breeze() {
     return (
-        <div>
-            Breeze
-        </div>
+        <Template map = 'Breeze'/>
     )
-};
+}

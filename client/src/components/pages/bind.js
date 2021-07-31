@@ -1,10 +1,8 @@
-import './bind.css';
-import React from 'react';
+import './pages.css';
+import Template from './template.js';
 
 export default function Bind() {
     return (
-        <div>
-            Bind
-        </div>
+        <Template map = 'Bind'/>
     )
-};
+}

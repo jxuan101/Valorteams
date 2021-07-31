@@ -1,10 +1,8 @@
-import './ascent.css';
-import React from 'react';
+import './pages.css';
+import Template from './template.js';
 
 export default function Ascent() {
     return (
-        <div>
-            Ascent
-        </div>
+        <Template map = 'Ascent'/>
     )
-};
+}

@@ -1,10 +1,8 @@
-import './icebox.css';
-import React from 'react';
+import './pages.css';
+import Template from './template.js';
 
 export default function Icebox() {
     return (
-        <div>
-            Icebox
-        </div>
+        <Template map = 'Icebox'/>
     )
-};
+}

@@ -9,4 +9,4 @@ const Team = new Schema(
     },
 )
 
-module.exports = mongoose.model('maps', Team)
+module.exports = mongoose.model('teams', Team)
