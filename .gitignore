@@ -11,7 +11,7 @@
 # production
 /build
 
-# databse
+# database
 /db/constants.js
 
 # misc
