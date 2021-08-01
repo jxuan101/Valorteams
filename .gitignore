@@ -13,7 +13,7 @@
 
 # database
 /db/constants.js
-/db/secrets.json
+db/secrets.json
 
 # misc
 .DS_Store
