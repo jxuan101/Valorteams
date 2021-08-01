@@ -1,6 +1,7 @@
 .navbar-container {
     background-color: #000;
     height: 200px;
+    width: 100vw;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -37,5 +38,5 @@ img {
 }
   
 .navbar-container::-webkit-scrollbar-track {
-    background: rgba(65, 64, 64, 0.979);
+    background: rgba(44, 44, 44, 0.979);
 }

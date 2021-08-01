@@ -1,6 +1,7 @@
 import './pages.css';
 import React from 'react';
-import ScrollToTop from './scroll_to_top';
+import Rankings from './rankings';
+import { withRouter } from 'react-router';
 
 import apis from '../../api';
 
@@ -27,7 +28,7 @@ class Template extends React.Component {
     createList = () => {
         const teams = this.state.teams;
         const listItems = teams.map(item => {
-            return (<div key = {item._id}>
+            return (<div className = "team-card" key = {item._id}>
                 {item.team.map((agent, index) => {
                     return (<img src = {findImage(agent)} className = "agent-img" alt = {agent} title = {agent} key = {index}/>);
                 })}
@@ -45,11 +46,11 @@ class Template extends React.Component {
 
         return (
             <div className = "teams-container">
-                <ScrollToTop/>
+                <Rankings/>
                 {this.createList()}
             </div>
         );
     }
 };
 
-export default Template;
+export default withRouter(Template);

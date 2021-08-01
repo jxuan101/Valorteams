@@ -1,5 +1,5 @@
 import './index.css';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import Breeze from '../../assets/Breeze.png';
 import Icebox from '../../assets/Icebox.png';
@@ -10,24 +10,24 @@ import Ascent from '../../assets/Ascent.png';
 
 export default function Navbar() {
 
-    // Horizontal scrolling on navbar
-    const onWheel = e => {
-        e.preventDefault();
-        var container = scrollRef.current;
-        var containerScrollPosition = scrollRef.current.scrollLeft;
-        container.scrollTo({
-            top: 0,
-            left: containerScrollPosition + e.deltaY,
-            behaviour: 'smooth'
-        })
-    }
+    // // Horizontal scrolling on navbar
+    // const onWheel = e => {
+    //     e.preventDefault();
+    //     var container = scrollRef.current;
+    //     var containerScrollPosition = scrollRef.current.scrollLeft;
+    //     container.scrollTo({
+    //         top: 0,
+    //         left: containerScrollPosition + e.deltaY,
+    //         behaviour: 'smooth'
+    //     })
+    // }
 
-    const scrollRef = useRef(null);
+    // const scrollRef = useRef(null);
 
     return (
         <div className = 'navbar-container'
-             ref = {scrollRef}
-             onWheel = {onWheel}
+            //  ref = {scrollRef}
+            //  onWheel = {onWheel}
         >
             <nav>
                 <div className = "navbar-link">

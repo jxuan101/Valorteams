@@ -16,7 +16,7 @@ export default function ScrollToTop() {
                 if (isMounted) setShowButton(false);
             }
 
-        });
+        }, {passive: false});
 
         return () => {
             isMounted = false;

@@ -11,11 +11,13 @@ import Bind from './components/pages/bind';
 import Haven from './components/pages/haven';
 import Split from './components/pages/split';
 import Ascent from './components/pages/ascent';
+import ScrollToTop from './components/pages/scroll_to_top';
 
 export default function App() {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop/>
       <Switch>
         <Route exact path = "/" component = {Home} />
         <Route path = "/breeze" component = {Breeze} />

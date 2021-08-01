@@ -1,0 +1,51 @@
+.rankings {
+    width: 200px;
+    height: 0;
+}
+
+.most-popular-rank {
+    display: flex;
+    position: relative;
+    color: white;
+    left: -350px;
+    top: 50px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.second-popular-rank {
+    display: flex;
+    position: relative;
+    color: white;
+    left: -280px;
+    top: 155px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.third-popular-rank {
+    display: flex;
+    position: relative;
+    color: white;
+    left: -260px;
+    top: 260px;
+    font-size: 19px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1080px) {
+    .most-popular-rank {
+        top: -20px;
+        left: 0;
+    }
+
+    .second-popular-rank {
+        top: 100px;
+        left: 40px;
+    }
+
+    .third-popular-rank {
+        top: 215px;
+        left: 55px;
+    }
+}
