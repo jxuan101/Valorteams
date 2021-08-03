@@ -4,6 +4,7 @@ import pymongo
 import json
 import os
 import requests
+from datetime import datetime
 
 # Retrieves the href for all matches on the page
 def get_matches(card):
@@ -85,6 +86,16 @@ def main():
     # Reset the collection if documents exists.
     if (map_collection.count_documents({}) > 0):
         map_collection.delete_many({})
+
+    # Add date and time.
+    now = datetime.now()
+    now_date = now.strftime("%d/%m/%Y")
+    now_time = now.strftime("%H:%M:%S")
+    map_collection.insert_one({
+        "update_date": now_date,
+        "update_time": now_time,
+    })
+
 
     ## Getting all the match links -- Finished 
 

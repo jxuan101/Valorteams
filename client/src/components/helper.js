@@ -14,8 +14,14 @@ import skye from '../assets/skye_icon.png';
 import sova from '../assets/sova_icon.png';
 import viper from '../assets/viper_icon.png';
 import yoru from '../assets/yoru_icon.png';
+import ascent from '../assets/Ascent_background.jpg';
+import bind from '../assets/Bind_background.png';
+import breeze from '../assets/Breeze_background.jpg';
+import haven from '../assets/Haven_background.png';
+import icebox from '../assets/Icebox_background.jpg';
+import split from '../assets/Split_background.png';
 
-export default function findImage(name) {
+const findImage = (name) => {
     switch(name) {
         case 'astra':
             return astra;
@@ -53,3 +59,24 @@ export default function findImage(name) {
             return astra;
     }
 }
+
+const findBackground = (map) => {
+    switch(map) {
+        case 'Ascent':
+            return ascent;
+        case 'Bind':
+            return bind;
+        case 'Breeze':
+            return breeze;
+        case 'Haven':
+            return haven;
+        case 'Icebox':
+            return icebox;
+        case 'Split':
+            return split;
+        default:
+            return ascent
+    }
+}
+
+export { findImage, findBackground }
