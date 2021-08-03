@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const database_uri = require ('./constants.js');
 const fs = require('fs');
 const path = require('path');
 
