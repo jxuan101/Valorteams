@@ -1,8 +1,9 @@
-from selenium import webdriver
 from bs4 import BeautifulSoup
 import sys
 import pymongo
 import json
+import os
+import requests
 
 # Retrieves the href for all matches on the page
 def get_matches(card):
@@ -73,7 +74,7 @@ def create_schema(match, collection):
 def main():
 
     # Get database uri from secrets file
-    f = open('../secrets.json',)
+    f = open(os.path.join((os.path.abspath(__file__ + "/../../")), 'secrets.json',))
     file_data = json.load(f)
 
     # Connect to database
@@ -85,8 +86,6 @@ def main():
     if (map_collection.count_documents({}) > 0):
         map_collection.delete_many({})
 
-    driver = webdriver.Chrome("./chromedriver")
-
     ## Getting all the match links -- Finished 
 
     match_links = []
@@ -96,8 +95,7 @@ def main():
 
     for page in pages:
         link = "https://www.vlr.gg/matches/results/" + page
-        driver.get(link)
-        content = driver.page_source
+        content = requests.get(link).content
         soup = BeautifulSoup(content, "html.parser")
         page_results = soup.find_all(lambda tag: tag.name == "div" and tag.get("class") == ["wf-card"])
         match_links += get_matches(page_results)
@@ -105,8 +103,7 @@ def main():
     ## Getting all the agents in each map played during the match -- Finished
     for match in match_links:
         link = "https://www.vlr.gg" + match
-        driver.get(link)
-        content = driver.page_source
+        content = requests.get(link).content
         soup = BeautifulSoup(content, "html.parser")
         
         print( link )
@@ -146,7 +143,6 @@ def main():
     print ("Database update successful.")
 
     ## Exit
-    driver.close()
     sys.exit()
 
 if __name__ == '__main__':
