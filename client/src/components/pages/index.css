@@ -1,4 +1,51 @@
-.main-container {
-    background-color: #000;
+.full-container {
+    position: absolute;
     color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100% - 200px);
+}
+
+.site-title-text {
+    position: absolute;
+    font-size: 60pt;
+    color: rgb(88, 0, 170);
+    top: 5%;
+    text-shadow: -1px 1px 0 rgb(116, 0, 0);
+}
+
+.site-info-text {
+    position: absolute;
+    top: 20%;
+}
+
+.update-info {
+    position: absolute;
+    top: 25%;
+}
+
+.home-text {
+    position: absolute;
+    top: 70%;
+}
+
+.data-text {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+}
+
+.vlr-link {
+    text-decoration: none;
+    color: rgb(192, 2, 2);
+}
+
+@media screen and (max-width: 550px) {
+    .site-title-text {
+        font-size: 40pt;
+    }
 }
