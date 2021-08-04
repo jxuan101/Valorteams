@@ -3,10 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 let rawdata = fs.readFileSync(path.resolve(__dirname, 'secrets.json'));
-let secrets = JSON.parse(rawdata);
+// let secrets = JSON.parse(rawdata);
 
 mongoose
-    .connect(secrets['database_uri'], { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(e => {
         console.error('Connection error', e.message)
     })

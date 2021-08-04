@@ -3,6 +3,7 @@ const { spawn } = require('child_process');
 const cors = require('cors');
 var path = require('path');
 var cron = require('node-cron');
+require('dotenv').config()
 
 const app = express();
 const port = process.env.PORT || 5000;
