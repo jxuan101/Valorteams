@@ -64,7 +64,7 @@ class Home extends React.Component {
                 </b>
                 {this.generateText(loading, hasError, update_timestamp)}
                 <b className = "data-text">
-                    Disclaimer: This site uses match data from <a className = "vlr-link" href = "https://www.vlr.gg" target = "_blank" rel = "noreferrer">VLR.gg</a>.
+                    Disclaimer: This site collects data from <a className = "vlr-link" href = "https://www.vlr.gg" target = "_blank" rel = "noreferrer">VLR.gg</a>.
                 </b>
             </div>
         );

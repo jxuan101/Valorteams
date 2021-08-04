@@ -2,6 +2,7 @@ import './template.css';
 import React from 'react';
 import Rankings from './rankings';
 import { withRouter } from 'react-router';
+import ScrollToTop from './scroll_to_top';
 
 import apis from '../../api';
 
@@ -98,6 +99,7 @@ class Template extends React.Component {
         else {
             return (
                 <div className = "full-container">
+                    <ScrollToTop/>
                     <div className = "bg-img" style = {
                         { 
                             backgroundImage: `url(${findBackground(this.props.map)})`,
