@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config()
 
-let rawdata = fs.readFileSync(path.resolve(__dirname, 'secrets.json'));
+// let rawdata = fs.readFileSync(path.resolve(__dirname, 'secrets.json'));
 // let secrets = JSON.parse(rawdata);
 
 mongoose
