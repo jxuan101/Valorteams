@@ -5,6 +5,7 @@ import json
 import os
 import requests
 from datetime import datetime
+from dotenv import load_dotenv, find_dotenv
 
 # Retrieves the href for all matches on the page
 def get_matches(card):
@@ -74,12 +75,13 @@ def create_schema(match, collection):
 
 def main():
 
+    load_dotenv(find_dotenv())
+
     # Get database uri from secrets file
-    f = open(os.path.join((os.path.abspath(__file__ + "/../../")), 'secrets.json',))
-    file_data = json.load(f)
+    MONGODB_URI = os.environ.get("MONGODB_URI")
 
     # Connect to database
-    client = pymongo.MongoClient(file_data['database_uri'])
+    client = pymongo.MongoClient(MONGODB_URI)
     db = client.get_database('valorteams')
     map_collection = db.get_collection("teams")
 
