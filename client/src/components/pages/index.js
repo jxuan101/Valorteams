@@ -30,7 +30,7 @@ class Home extends React.Component {
     }
 
     generateText(loading, error, update_timestamp) {
-        if (loading || error) {
+        if (loading || error || !update_timestamp[0]) {
             return (
                 <b className = "home-text">
                     Unable to get last database update timestamp.
