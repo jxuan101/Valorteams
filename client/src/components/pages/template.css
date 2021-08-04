@@ -8,6 +8,19 @@
     overflow-x: hidden;
 }
 
+.full-container::-webkit-scrollbar {
+    background: black;
+    width: 5px;
+}
+
+.full-container::-webkit-scrollbar-thumb {
+    background: rgb(22, 163, 173);
+}
+
+.full-container::-webkit-scrollbar-track {
+    background: rgba(44, 44, 44, 0.979);
+}
+
 .bg-img {
     position: fixed;
     width: 100%;
@@ -18,6 +31,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-clip: content-box;
+    padding-right: 5px;
 }
 
 .teams-container {
@@ -25,6 +39,7 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    width: 100%;
 }
 
 .team-card {

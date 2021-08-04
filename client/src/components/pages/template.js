@@ -100,15 +100,15 @@ class Template extends React.Component {
             return (
                 <div className = "full-container">
                     <ScrollToTop/>
+                    <div className = "teams-container">
+                        <Rankings/>
+                        {this.createList()}
+                    </div>
                     <div className = "bg-img" style = {
                         { 
                             backgroundImage: `url(${findBackground(this.props.map)})`,
                         }
                     }/>
-                    <div className = "teams-container">
-                        <Rankings/>
-                        {this.createList()}
-                    </div>
                 </div>
             );
         }
