@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react';
 import apis from '../../api';
 import valorant from '../../assets/VALORANT.jpg';
+import github from '../../assets/GitHub-Mark.png';
 
 class Home extends React.Component {
     constructor(props) {
@@ -66,6 +67,9 @@ class Home extends React.Component {
                 <b className = "data-text">
                     Disclaimer: This site collects data from <a className = "vlr-link" href = "https://www.vlr.gg" target = "_blank" rel = "noreferrer">VLR.gg</a>.
                 </b>
+                <a href = "https://github.com/jxuan101/Valorteams" className = "github-link">
+                    <img src = {github} className = "github-icon" alt = "Source"/>
+                </a>
             </div>
         );
     }

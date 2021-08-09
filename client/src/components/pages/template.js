@@ -41,7 +41,9 @@ class Template extends React.Component {
             if (counter === 1) {
                 counter += 1;
                 return (<div className = "team-card" key = {item._id} style = {
-                    { border: '3px rgb(255, 230, 2) solid', }
+                    { 
+                        border: '3px rgb(255, 230, 2) solid', 
+                    }
                 }>
                     {item.team.map((agent, index) => {
                         return (<img src = {findImage(agent)} className = "agent-img" alt = {agent} title = {agent} key = {index}/>);

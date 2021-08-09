@@ -44,6 +44,11 @@
     color: rgb(192, 2, 2);
 }
 
+.github-link {
+    position: absolute;
+    top: 600px;
+}
+
 @media screen and (max-width: 550px) {
     .site-title-text {
         font-size: 40pt;

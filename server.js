@@ -29,7 +29,7 @@ app.get('*', (req, res) => {
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // Run the python script to update database every week.
-cron.schedule('0 8 * * Sun', () => {
+cron.schedule('0 8 * * Monday', () => {
 
 	console.log("Updating database...")
 	var process = spawn('python', [scraper]);

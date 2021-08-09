@@ -78,7 +78,7 @@ def main():
     load_dotenv(find_dotenv())
 
     # Get database uri from secrets file
-    MONGODB_URI = os.environ.get("MONGODB_URI")
+    MONGODB_URI = os.environ.get("REACT_APP_MONGODB_URI")
 
     # Connect to database
     client = pymongo.MongoClient(MONGODB_URI)
@@ -91,7 +91,7 @@ def main():
 
     # Add date and time.
     now = datetime.now()
-    now_date = now.strftime("%d/%m/%Y")
+    now_date = now.strftime("%m/%d/%Y")
     now_time = now.strftime("%H:%M:%S")
     map_collection.insert_one({
         "update_date": now_date,
