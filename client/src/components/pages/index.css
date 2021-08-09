@@ -46,7 +46,7 @@
 
 .github-link {
     position: absolute;
-    top: 600px;
+    bottom: 35px;
 }
 
 @media screen and (max-width: 550px) {
