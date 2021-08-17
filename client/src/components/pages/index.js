@@ -61,7 +61,7 @@ class Home extends React.Component {
                     Based on 200 most recent pro matches.
                 </b>
                 <b className = "update-info">
-                    Auto-updates every monday.
+                    Auto-updates are unavailable due to Heroku limitations.
                 </b>
                 {this.generateText(loading, hasError, update_timestamp)}
                 <b className = "data-text">
